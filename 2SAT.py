@@ -48,16 +48,33 @@ def unit_prop(clauses, values):
     print(f'IN UNIT 1: {clauses}')
     return 
 
-def pure_elim(clauses):
-    pass
+def pure_elim(clauses, values):
+    #dictionary to hold literals that only appears as a positive OR negative literal in all clauses 
+    purevars = {}
 
+    #collect all numbers into the dictionary
+    for clause in clauses:
+        for num in clause:
+            purevars[num] = purevars.get(num, 0) + 1
+
+    #sort through any variable that has both positive and negtive literals
+    purevars = {key: value for key, value in purevars.items() if -(key) not in purevars}
+
+    #assign the truth value in the values list
+    for key in purevars.keys():
+        if key < 0:
+            values[abs(key) - 1] = False
+        else:
+            values[abs(key) - 1] = True
+    print(purevars)
+    print(values)
 def DPLL(clauses, values):
     # unit propagation
     while any(len(clause) == 1 for clause in clauses):
         unit_prop(clauses, values)
         print(f'IN DPLL 1: {clauses}')
 
-    # # pure literal elimination:
+    # pure literal elimination:
     # while there is a literal l that occurs pure in clauses do
     #     clauses ← pure-literal-assign(l, clauses);
     # # stopping conditions:
@@ -71,22 +88,24 @@ def DPLL(clauses, values):
 
 
 def main():
-    clauses, problem_number, num_clauses, num_vars = read_csv("2SAT_test1.csv")
+    clauses, problem_number, num_clauses, num_vars = read_csv("2SAT_test2.csv")
     values = [None] * num_vars
     print(f'values: {values}')
     print(f'problem number: {problem_number}')
     print(f'# of clauses: {num_clauses}')
     print(f'# of variables: {num_vars}')
     print(clauses)
-    print("\n")
-    DPLL(clauses, values)
-    print(f'MAIN 2: {clauses}')
-    print(values)
+    # print("\n")
+    # DPLL(clauses, values)
+    # print(f'MAIN 2: {clauses}')
+    # print(values)
 
-    if clauses:
-        print("unsatisfiable")
-    else:
-        print("satisfiable")
+    #pure elim
+    pure_elim(clauses, values)
+    # if clauses:
+    #     print("unsatisfiable")
+    # else:
+    #     print("satisfiable")
 
 if __name__ == "__main__":
     main()
