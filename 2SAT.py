@@ -26,26 +26,40 @@ def read_csv(csvfile):
 def unit_prop(clauses, values):
     #remember any clauses with a single literal
     singles = []
+
     #loop through each clause of all clauses
     for clause in clauses:
-        print(clause)
+        print(f'IN UNIT (CLAUSES): {clause}')
         #if a clause has a single append it to remember
         if len(clause) == 1:
             singles.append(clause[0])
     print(f'singles: {singles}')
+
     #loop through the list of single literals 
     for single in singles:
-        #assign the value in the values list
+        #assign the truth value in the values list
         if single < 0:
             values[abs(single) - 1] = False
         elif single > 0:
             values[single - 1] = True
-        # using list comprehension if that variable appears in other clauses then also remove that literal
-        for i, clause in enumerate(clauses):
-            clauses[i] = [var for var in clause if abs(var) != abs(single)]
+        # using list comprehension if that variable appears in other clauses then also remove
+        update_clauses = []
+        # if the literal is false, then remove just the literal
+        # if the literal is true, remove the entire clause
+        for clause in clauses:
+            if values[abs(single) - 1] == False:
+                update_clause = [var for var in clause if abs(var) != abs(single)]
+                update_clauses.append(update_clause)
+            else:
+                continue
+        
+    print(f'updated clauses: {update_clauses}')
+    clauses = update_clauses
+
     #remove any empty lists, must modify in place
     clauses[:] = [clause for clause in clauses if len(clause) != 0] 
     print(f'IN UNIT 1: {clauses}')
+    print(f'IN UNIT (VALUES): {values}')
     return 
 
 def pure_elim(clauses, values):
@@ -88,7 +102,7 @@ def DPLL(clauses, values):
 
 
 def main():
-    clauses, problem_number, num_clauses, num_vars = read_csv("2SAT_test2.csv")
+    clauses, problem_number, num_clauses, num_vars = read_csv("2SAT_test1.csv")
     values = [None] * num_vars
     print(f'values: {values}')
     print(f'problem number: {problem_number}')
@@ -96,12 +110,12 @@ def main():
     print(f'# of variables: {num_vars}')
     print(clauses)
     # print("\n")
-    # DPLL(clauses, values)
+    DPLL(clauses, values)
     # print(f'MAIN 2: {clauses}')
     # print(values)
 
     #pure elim
-    pure_elim(clauses, values)
+    # pure_elim(clauses, values)
     # if clauses:
     #     print("unsatisfiable")
     # else:
