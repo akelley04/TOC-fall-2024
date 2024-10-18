@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import csv
+import csv, time
 
 def read_csv(csvfile):
     file_name = csvfile
@@ -27,18 +27,31 @@ def read_csv(csvfile):
                 #collected all the clauses
                 if count == num_clauses:
                     values = [None] * num_vars
+                    #call algorithm and get time
+                    start = time.time()
                     done = DPLL(clauses, values)
+                    run_time = time.time() - start
                     if done:
                         print("Satisfiable")
                         sat += 1
+                        # #save satisfiable points
+                        # with open('output_xsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{num_clauses * 2}\n')
+                        # #save satisfiable points
+                        # with open('output_ysat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{run_time}\n')
                     else:
                         print("Unsatisfiable")
                         unsat += 1
+                        # #save unsatisfiable points
+                        # with open('output_xunsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{num_clauses * 2}\n')
+                        # #save satisfiable points
+                        # with open('output_yunsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{run_time}\n')
                     count = 0
                     clauses = []
-    print(f'SATISFIED: {sat}')
-    print(f'UNSATISFIED: {unsat}')
-
+    print(f'Given the csv there are {sat} satisfiable expressions and {unsat} unsatisfiable expressions')
 
 def unit_prop(clauses, values):
     #remember any clauses with a single literal
@@ -46,7 +59,6 @@ def unit_prop(clauses, values):
 
     #loop through each clause of all clauses
     for clause in clauses:
-<<<<<<< HEAD
         #if a clause has a single append it to remember
         if len(clause) == 1:
             singles.append(clause[0])
@@ -63,40 +75,6 @@ def unit_prop(clauses, values):
             # remove negation of literal from each clause of clauses
             for i, clause in enumerate(clauses):
                 clauses[i] = [lit for lit in clause if lit != -(single)]
-=======
-        print(f'IN UNIT (CLAUSES): {clause}')
-        #if a clause has a single append it to remember
-        if len(clause) == 1:
-            singles.append(clause[0])
-    print(f'singles: {singles}')
-
-    #loop through the list of single literals 
-    for single in singles:
-        #assign the truth value in the values list
-        if single < 0:
-            values[abs(single) - 1] = False
-        elif single > 0:
-            values[single - 1] = True
-        # using list comprehension if that variable appears in other clauses then also remove
-        update_clauses = []
-        # if the literal is false, then remove just the literal
-        # if the literal is true, remove the entire clause
-        for clause in clauses:
-            if values[abs(single) - 1] == False:
-                update_clause = [var for var in clause if abs(var) != abs(single)]
-                update_clauses.append(update_clause)
-            else:
-                continue
-        
-    print(f'updated clauses: {update_clauses}')
-    clauses = update_clauses
-
-    #remove any empty lists, must modify in place
-    clauses[:] = [clause for clause in clauses if len(clause) != 0] 
-    print(f'IN UNIT 1: {clauses}')
-    print(f'IN UNIT (VALUES): {values}')
-    return 
->>>>>>> 1e74fe2628c0f1afe21b85eeb4e1fddec9cfc526
 
 def pure_elim(clauses, values):
     #dictionary to hold literals that only appears as a positive OR negative literal in all clauses 
@@ -137,28 +115,7 @@ def DPLL(clauses, values):
     return DPLL(clauses + [[l]], values) or DPLL(clauses + [[-l]], values)
 
 def main():
-<<<<<<< HEAD
-    read_csv("2SAT_test4.csv")
-=======
-    clauses, problem_number, num_clauses, num_vars = read_csv("2SAT_test1.csv")
-    values = [None] * num_vars
-    print(f'values: {values}')
-    print(f'problem number: {problem_number}')
-    print(f'# of clauses: {num_clauses}')
-    print(f'# of variables: {num_vars}')
-    print(clauses)
-    # print("\n")
-    DPLL(clauses, values)
-    # print(f'MAIN 2: {clauses}')
-    # print(values)
-
-    #pure elim
-    # pure_elim(clauses, values)
-    # if clauses:
-    #     print("unsatisfiable")
-    # else:
-    #     print("satisfiable")
->>>>>>> 1e74fe2628c0f1afe21b85eeb4e1fddec9cfc526
+    read_csv("data_Kelle-yeah!.csv")
 
 if __name__ == "__main__":
     main()
