@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import csv
+import csv, time
 
 def read_csv(csvfile):
     file_name = csvfile
@@ -27,18 +27,31 @@ def read_csv(csvfile):
                 #collected all the clauses
                 if count == num_clauses:
                     values = [None] * num_vars
+                    #call algorithm and get time
+                    start = time.time()
                     done = DPLL(clauses, values)
+                    run_time = time.time() - start
                     if done:
                         print("Satisfiable")
                         sat += 1
+                        # #save satisfiable points
+                        # with open('output_xsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{num_clauses * 2}\n')
+                        # #save satisfiable points
+                        # with open('output_ysat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{run_time}\n')
                     else:
                         print("Unsatisfiable")
                         unsat += 1
+                        # #save unsatisfiable points
+                        # with open('output_xunsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{num_clauses * 2}\n')
+                        # #save satisfiable points
+                        # with open('output_yunsat_Kelle-yeah!.txt', 'a') as file:
+                        #     file.writelines(f'{run_time}\n')
                     count = 0
                     clauses = []
-    print(f'SATISFIED: {sat}')
-    print(f'UNSATISFIED: {unsat}')
-
+    print(f'Given the csv there are {sat} satisfiable expressions and {unsat} unsatisfiable expressions')
 
 def unit_prop(clauses, values):
     #remember any clauses with a single literal
@@ -102,7 +115,7 @@ def DPLL(clauses, values):
     return DPLL(clauses + [[l]], values) or DPLL(clauses + [[-l]], values)
 
 def main():
-    read_csv("2SAT_test4.csv")
+    read_csv("data_Kelle-yeah!.csv")
 
 if __name__ == "__main__":
     main()

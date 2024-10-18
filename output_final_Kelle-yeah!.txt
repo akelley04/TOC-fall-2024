@@ -1,0 +1,201 @@
+Problem #1000 has 4 variables and 9 clauses
+Satisfiable
+Problem #1001 has 4 variables and 9 clauses
+Unsatisfiable
+Problem #1002 has 4 variables and 9 clauses
+Satisfiable
+Problem #1003 has 4 variables and 9 clauses
+Satisfiable
+Problem #1004 has 4 variables and 9 clauses
+Unsatisfiable
+Problem #1005 has 4 variables and 9 clauses
+Unsatisfiable
+Problem #1006 has 4 variables and 9 clauses
+Unsatisfiable
+Problem #1007 has 4 variables and 9 clauses
+Satisfiable
+Problem #1008 has 4 variables and 9 clauses
+Satisfiable
+Problem #1009 has 4 variables and 9 clauses
+Satisfiable
+Problem #1010 has 8 variables and 18 clauses
+Satisfiable
+Problem #1011 has 8 variables and 18 clauses
+Satisfiable
+Problem #1012 has 8 variables and 18 clauses
+Satisfiable
+Problem #1013 has 8 variables and 18 clauses
+Unsatisfiable
+Problem #1014 has 8 variables and 18 clauses
+Unsatisfiable
+Problem #1015 has 8 variables and 18 clauses
+Unsatisfiable
+Problem #1016 has 8 variables and 18 clauses
+Unsatisfiable
+Problem #1017 has 8 variables and 18 clauses
+Satisfiable
+Problem #1018 has 8 variables and 18 clauses
+Satisfiable
+Problem #1019 has 8 variables and 18 clauses
+Unsatisfiable
+Problem #1020 has 12 variables and 20 clauses
+Unsatisfiable
+Problem #1021 has 12 variables and 20 clauses
+Satisfiable
+Problem #1022 has 12 variables and 20 clauses
+Satisfiable
+Problem #1023 has 12 variables and 20 clauses
+Satisfiable
+Problem #1024 has 12 variables and 20 clauses
+Satisfiable
+Problem #1025 has 12 variables and 20 clauses
+Satisfiable
+Problem #1026 has 12 variables and 20 clauses
+Unsatisfiable
+Problem #1027 has 12 variables and 20 clauses
+Unsatisfiable
+Problem #1028 has 12 variables and 20 clauses
+Unsatisfiable
+Problem #1029 has 12 variables and 20 clauses
+Unsatisfiable
+Problem #1030 has 16 variables and 30 clauses
+Satisfiable
+Problem #1031 has 16 variables and 30 clauses
+Unsatisfiable
+Problem #1032 has 16 variables and 30 clauses
+Satisfiable
+Problem #1033 has 16 variables and 30 clauses
+Satisfiable
+Problem #1034 has 16 variables and 30 clauses
+Unsatisfiable
+Problem #1035 has 16 variables and 30 clauses
+Satisfiable
+Problem #1036 has 16 variables and 30 clauses
+Unsatisfiable
+Problem #1037 has 16 variables and 30 clauses
+Satisfiable
+Problem #1038 has 16 variables and 30 clauses
+Unsatisfiable
+Problem #1039 has 16 variables and 30 clauses
+Satisfiable
+Problem #1040 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1041 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1042 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1043 has 18 variables and 32 clauses
+Satisfiable
+Problem #1044 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1045 has 18 variables and 32 clauses
+Satisfiable
+Problem #1046 has 18 variables and 32 clauses
+Satisfiable
+Problem #1047 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1048 has 18 variables and 32 clauses
+Satisfiable
+Problem #1049 has 18 variables and 32 clauses
+Unsatisfiable
+Problem #1050 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1051 has 20 variables and 33 clauses
+Satisfiable
+Problem #1052 has 20 variables and 33 clauses
+Satisfiable
+Problem #1053 has 20 variables and 33 clauses
+Satisfiable
+Problem #1054 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1055 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1056 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1057 has 20 variables and 33 clauses
+Satisfiable
+Problem #1058 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1059 has 20 variables and 33 clauses
+Unsatisfiable
+Problem #1060 has 22 variables and 38 clauses
+Satisfiable
+Problem #1061 has 22 variables and 38 clauses
+Satisfiable
+Problem #1062 has 22 variables and 38 clauses
+Unsatisfiable
+Problem #1063 has 22 variables and 38 clauses
+Satisfiable
+Problem #1064 has 22 variables and 38 clauses
+Satisfiable
+Problem #1065 has 22 variables and 38 clauses
+Satisfiable
+Problem #1066 has 22 variables and 38 clauses
+Unsatisfiable
+Problem #1067 has 22 variables and 38 clauses
+Unsatisfiable
+Problem #1068 has 22 variables and 38 clauses
+Satisfiable
+Problem #1069 has 22 variables and 38 clauses
+Unsatisfiable
+Problem #1070 has 24 variables and 43 clauses
+Unsatisfiable
+Problem #1071 has 24 variables and 43 clauses
+Satisfiable
+Problem #1072 has 24 variables and 43 clauses
+Satisfiable
+Problem #1073 has 24 variables and 43 clauses
+Unsatisfiable
+Problem #1074 has 24 variables and 43 clauses
+Unsatisfiable
+Problem #1075 has 24 variables and 43 clauses
+Unsatisfiable
+Problem #1076 has 24 variables and 43 clauses
+Satisfiable
+Problem #1077 has 24 variables and 43 clauses
+Unsatisfiable
+Problem #1078 has 24 variables and 43 clauses
+Satisfiable
+Problem #1079 has 24 variables and 43 clauses
+Satisfiable
+Problem #1080 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1081 has 26 variables and 45 clauses
+Satisfiable
+Problem #1082 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1083 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1084 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1085 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1086 has 26 variables and 45 clauses
+Satisfiable
+Problem #1087 has 26 variables and 45 clauses
+Satisfiable
+Problem #1088 has 26 variables and 45 clauses
+Unsatisfiable
+Problem #1089 has 26 variables and 45 clauses
+Satisfiable
+Problem #1090 has 28 variables and 47 clauses
+Unsatisfiable
+Problem #1091 has 28 variables and 47 clauses
+Satisfiable
+Problem #1092 has 28 variables and 47 clauses
+Unsatisfiable
+Problem #1093 has 28 variables and 47 clauses
+Unsatisfiable
+Problem #1094 has 28 variables and 47 clauses
+Unsatisfiable
+Problem #1095 has 28 variables and 47 clauses
+Satisfiable
+Problem #1096 has 28 variables and 47 clauses
+Satisfiable
+Problem #1097 has 28 variables and 47 clauses
+Satisfiable
+Problem #1098 has 28 variables and 47 clauses
+Unsatisfiable
+Problem #1099 has 28 variables and 47 clauses
+Satisfiable
+Given the csv there are 50 satisfiable expressions and 50 unsatisfiable expressions
